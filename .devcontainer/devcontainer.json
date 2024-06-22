@@ -1,0 +1,31 @@
+{
+    "name": "transformers-pytorch-gpu",
+    "build": {
+        "dockerfile": "Dockerfile_cpu"
+    },
+    "runArgs": [
+        // "--gpus",
+        // "all",
+        "-v",
+        "/home/wem/.cache/huggingface/hub:/root/.cache/huggingface/hub"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.black-formatter",
+                "ms-toolsai.jupyter",
+                "eamodio.gitlens",
+                "visualstudioexptteam.vscodeintellicode",
+                "GitHub.copilot",
+                "GitHub.copilot-chat"
+            ],
+            "settings": {
+                "jupyter.runStartupCommands": [
+                    "%load_ext autoreload",
+                    "%autoreload 2"
+                ]
+            }
+        }
+    }
+}

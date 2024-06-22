@@ -1,0 +1,5 @@
+FROM intel-extension-for-pytorch:main
+
+RUN python3 -m pip install -U ipykernel ipywidgets packaging ninja
+RUN pip install -U qdrant-client
+RUN pip install transformers
